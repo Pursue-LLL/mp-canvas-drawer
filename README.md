@@ -8,6 +8,8 @@
 npm install mp-canvas-drawer --save
 ```
 
+在小程序中需要构建 npm [官方文档](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
+
 ## 功能
 
 1. 支持绘制图片
@@ -37,6 +39,7 @@ npm install mp-canvas-drawer --save
  在页面或组件中导入，并且初始化
 
  ``` js
+ // W2P == wxml to post
  import W2P from 'mp-canvas-drawer';
 
  onLoad(){
@@ -60,7 +63,7 @@ npm install mp-canvas-drawer --save
 
  |  参数 | 说明    | 是否必填 |
  | :-------------: | :----------: | :---:|
- | canvasId | 告知工具要绘制哪个canvas组件| 是 |  
+ | canvasId | 告知工具要绘制哪个canvas组件| 是 |
  | instance | 页面或组件的实例对象，即this，在页面中使用时可以不传，会默认取`wx.createSelectorQuery`[参见](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/wx.createSelectorQuery.html)，组件中使用时必传，因为要获取这个实例上的canvas组件 | 否 |
  |container |  海报图容器参数，该参数是一个对象，可以设置背景颜色和圆角 {bgColor, radius} | 否|
  |container.bgColor| 背景颜色，默认'#ffffff'| 否|
