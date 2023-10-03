@@ -1,7 +1,8 @@
 {
   "name": "mp-canvas-drawer",
-  "version": "1.0.2",
-  "main": "dist/index.min.js",
+  "version": "1.0.4",
+  "description": "微信程序绘制分享海报工具，提供从绘制到保存到相册的整套完整方案",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c"
   },
@@ -9,14 +10,25 @@
     "miniprogram",
     "canvas",
     "poster",
-    "小程序海报"
+    "小程序海报",
+    "分享海报"
   ],
-  "author": "coderliu",
-  "license": "ISC",
-  "description": "微信小程序海报绘制与分享工具，提供从绘制到保存到相册的整套完整方案",
-  "dependencies": {
-    "mp-canvas-drawer": "^1.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pursue-LLL/mp-canvas-drawer.git"
   },
+  "homepage": "https://juejin.cn/post/7130659159980113956",
+  "author": {
+    "name": "Pursue-LLL",
+    "email": "purusebutter2018@163.com",
+    "url": "https://juejin.cn/user/817692379722311"
+  },
+  "type":"module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "rollup": "^1.23.1",
     "rollup-plugin-license": "^2.8.1",

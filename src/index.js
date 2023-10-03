@@ -171,7 +171,7 @@ export default class CanvasDrawer {
     if (calWidth) width = this.ctx.measureText(str).width; // 必须在设置字体属性后未绘制前计算才能拿到准确值; 无需计算时避免耗费性能
     this.ctx.textAlign = align;
     this.ctx.textBaseline = baseLine;
-    this.ctx.fillText(str+'99', this.toPx(x), this.toPx(y));
+    this.ctx.fillText(str, this.toPx(x), this.toPx(y));
     this.ctx.restore();
     return width;
   }
@@ -249,7 +249,11 @@ export default class CanvasDrawer {
     });
   }
 
-  // 获取相册权限
+  /**
+   * 获取相册权限
+   *
+   * @returns {*}
+   */
   getAlbumAuth() {
     return new Promise((resolve, reject) => {
       wx.getSetting({
@@ -308,7 +312,11 @@ export default class CanvasDrawer {
     });
   }
 
-  // 导出画布(先导出，再saveImage)
+  /**
+   * 导出画布(先导出，再saveImage)
+   *
+   * @returns {*}
+   */
   canvasExport() {
     return new Promise((resolve, reject) => {
       wx.canvasToTempFilePath({
@@ -324,8 +332,13 @@ export default class CanvasDrawer {
     });
   }
 
-  // 获取画布导出状态
+  /**
+   * 获取画布导出状态
+   *
+   * @returns {boolean}
+   */
   getExportDone() {
     return !!this.tempFilePath;
   }
 };
+
